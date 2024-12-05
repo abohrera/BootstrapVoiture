@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Top Voitures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .card-img-top {
+            object-fit: cover;
+            max-height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="d-flex flex-wrap justify-content-center py-3 text-bg-dark">
+        <a href="/" class="d-flex align-items-center text-white text-decoration-none">
+            <span class="fs-4 text-center">Voitures</span>
+        </a>
+    </header>
+
+    <!-- Section -->
+    <section>
+        <h1 class="text-center mt-2">Top Voitures</h1>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <!-- Card 1 -->
+                    <div class="col" data-car-id="1">
+                        <div class="card shadow-sm">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA1qA7to_t9u4rft5ZGEerb4idp0fc5IghOA&s" class="card-img-top" alt="Ferrari LaFerrari">
+                            <div class="card-body">
+                                <h5 class="card-title">Ferrari LaFerrari</h5>
+                                <p class="card-text">Année : 2013</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="viewImage(this)">Voir</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editModal"
+                                            onclick="fillModal(this)">Modifier</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col" data-car-id="2">
+                        <div class="card shadow-sm">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKkU8mmbYu0jLrf4mDCFXyVykqpf8P3crx5w&s" class="card-img-top" alt="Bugatti Chiron">
+                            <div class="card-body">
+                                <h5 class="card-title">Bugatti Chiron</h5>
+                                <p class="card-text">Année : 2019</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="viewImage(this)">Voir</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editModal"
+                                            onclick="fillModal(this)">Modifier</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col" data-car-id="3">
+                        <div class="card shadow-sm">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbLor162H2Mrj_jO38rh3AfTNbdXiXOz1Y2Q&s" class="card-img-top" alt="Porsche 911">
+                            <div class="card-body">
+                                <h5 class="card-title">Porsche 911</h5>
+                                <p class="card-text">Année : 2022</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="viewImage(this)">Voir</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editModal"
+                                            onclick="fillModal(this)">Modifier</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col" data-car-id="4">
+                        <div class="card shadow-sm">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNeDn9K7SrSNwXayjUwTuK2lL36wEr7ooZDQ&s" class="card-img-top" alt="Tesla Model S">
+                            <div class="card-body">
+                                <h5 class="card-title">Tesla Model S</h5>
+                                <p class="card-text">Année : 2021</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="viewImage(this)">Voir</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editModal"
+                                            onclick="fillModal(this)">Modifier</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col" data-car-id="5">
+                        <div class="card shadow-sm">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfHK5413BmTZ80-i3xyDJwLz15wU6B3NCxYw&s" class="card-img-top" alt="Lamborghini Aventador">
+                            <div class="card-body">
+                                <h5 class="card-title">Lamborghini Aventador</h5>
+                                <p class="card-text">Année : 2020</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="viewImage(this)">Voir</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editModal"
+                                            onclick="fillModal(this)">Modifier</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col" data-car-id="6">
+                        <div class="card shadow-sm">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ86_6PkJm666x1sfPhYhcuchzywdj9DdUwUA&s" class="card-img-top" alt="McLaren P1">
+                            <div class="card-body">
+                                <h5 class="card-title">McLaren P1</h5>
+                                <p class="card-text">Année : 2024</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="viewImage(this)">Voir</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editModal"
+                                            onclick="fillModal(this)">Modifier</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Modifier -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editModalLabel">Modifier Voiture</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <div class="mb-3">
+                            <label for="carTitle" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="carTitle" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="carYear" class="form-label">Année</label>
+                            <input type="text" class="form-control" id="carYear" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="carImageUrl" class="form-label">URL de l'image</label>
+                            <input type="text" class="form-control" id="carImageUrl" />
+                        </div>
+                        <img id="previewImage" src="" class="img-fluid" alt="Preview" />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary" onclick="saveChanges()">Sauvegarder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Voir l'image -->
+    <div class="modal fade" id="viewImageModal" tabindex="-1" aria-labelledby="viewImageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewImageModalLabel">Image complète</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="fullImage" src="" class="img-fluid" alt="Image complète" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentCard = null;
+
+        function fillModal(button) {
+            currentCard = button.closest('.card');
+
+            const title = currentCard.querySelector('.card-title').textContent;
+            const year = currentCard.querySelector('.card-text').textContent.replace('Année : ', '');
+            const imageUrl = currentCard.querySelector('.card-img-top').src;
+
+            document.getElementById('carTitle').value = title;
+            document.getElementById('carYear').value = year;
+            document.getElementById('carImageUrl').value = imageUrl;
+            document.getElementById('previewImage').src = imageUrl;
+        }
+
+        function saveChanges() {
+            if (currentCard) {
+                // Récupérer les nouvelles valeurs
+                const newTitle = document.getElementById('carTitle').value;
+                const newYear = document.getElementById('carYear').value;
+                const newImageUrl = document.getElementById('carImageUrl').value;
+
+                // Mettre à jour la carte avec les nouvelles valeurs
+                currentCard.querySelector('.card-title').textContent = newTitle;
+                currentCard.querySelector('.card-text').textContent = `Année : ${newYear}`;
+                currentCard.querySelector('.card-img-top').src = newImageUrl;
+
+                // Fermer la modale
+                const modal = bootstrap.Modal.getInstance(document.getElementById('editModal'));
+                modal.hide();
+            }
+        }
+
+        function viewImage(button) {
+            const card = button.closest('.card');
+            const imageUrl = card.querySelector('.card-img-top').src;
+
+            document.getElementById('fullImage').src = imageUrl;
+            const viewImageModal = new bootstrap.Modal(document.getElementById('viewImageModal'));
+            viewImageModal.show();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
